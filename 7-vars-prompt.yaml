@@ -8,6 +8,6 @@
       prompt: please enter your password
       private: True #when we given true it's does not show the terminal what we enter the password
   tasks:
-  - name: print override information
+  - name: print information
     ansible.builtin.debug:
-      msg: "Hi, we are learning {{Course}} from Trainer {{Trainer}}, Duration is {{Duration}}."
+      msg: "Hi, Username: {{USERNAME}} from Password is: {{PASSWORD}}."
