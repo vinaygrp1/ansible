@@ -1,0 +1,13 @@
+- name: variables
+  hosts: localhost
+  vars_prompt:
+    - name: USERNAME # i m not interest given to value in this files
+      prompt: please enter your username
+      private: false # when we given false what we type in terminal its shows
+    - name: PASSWORD
+      prompt: please enter your password
+      private: True #when we given true it's does not show the terminal what we enter the password
+  tasks:
+  - name: print override information
+    ansible.builtin.debug:
+      msg: "Hi, we are learning {{Course}} from Trainer {{Trainer}}, Duration is {{Duration}}."
