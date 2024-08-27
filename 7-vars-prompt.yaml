@@ -1,4 +1,4 @@
-- name: variables
+- name: variables from prompt
   hosts: localhost
   vars_prompt:
     - name: USERNAME # i m not interest given to value in this files
