@@ -1,28 +1,15 @@
-# - name: default value
-#   hosts: localhost
-#   tasks:
-#   - name: print default value
-#     ansible.builtin.debug:
-#       msg: "Hello {{ course | default('Ansible') }}"
-# - name: upper case
-#   hosts: localhost
-#   #vars:
-#     #greeting: "Hello, Good Morning"
-#   tasks:
-#   - name: convert into uppercase
-#     ansible.builtin.debug:
-#       msg: "{{ hello good morning | upper }}"
 - name: default value
   hosts: localhost
   tasks:
   - name: print default value
     ansible.builtin.debug:
-      msg: "Hello {{course | default('Ansible') }}" # user forgot to pass course value then bydefault value it will take.
-- name: upper case
+      msg: "Hello {{ course | default('Ansible')}}"
+
+- name: uppercase
   hosts: localhost
-  #vars:
-    #greeting: "Hello, Good Morning"
+  vars:
+    greeting: "Hello, Good Morning"
   tasks:
   - name: convert into uppercase
     ansible.builtin.debug:
-      msg: "{{ 'Hello, nirmala how are you' | upper }}"
+      msg: "{{ greeting | upper }}"
