@@ -20,9 +20,9 @@
       msg: "Hello {{course | default('Ansible') }}" # user forgot to pass course value then bydefault value it will take.
 - name: upper case
   hosts: localhost
-  vars:
-    greeting: "Hello, Good Morning"
+  #vars:
+    #greeting: "Hello, Good Morning"
   tasks:
   - name: convert into uppercase
     ansible.builtin.debug:
-      msg: "{{ greeting | upper }}"
+      msg: "{{ Hello nirmala how are you | upper }}"
