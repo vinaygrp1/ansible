@@ -25,4 +25,4 @@
   tasks:
   - name: convert into uppercase
     ansible.builtin.debug:
-      msg: "{{ (Hello nirmala how are you) | upper }}"
+      msg: "{{ 'Hello nirmala how are you' | upper }}"
