@@ -36,5 +36,21 @@
   tasks:
   - name: print min and max
     ansible.builtin.debug:
-      msg: "min age : {{ ages | min }}, max age: {{ ages | max }}"               
+      msg: "min age : {{ ages | min }}, max age: {{ ages | max }}"
+- name: convert dictionary into items/list
+  host: localhost
+  vars:
+    my_dict: # this is called as dictionary or map or key value pair
+      Course: Ansible
+      Trainer: Vinay
+      Duration: 120hrs
+  tasks:
+  - name: before convert
+    ansible.bultin.debug:
+      msg: "Before convert: {{ my_dict }}"
+  - name: after convert
+    ansible.bultin.debug:
+      msg: "after convert: {{ my_dict | dict2times }}" 
+
+
 
