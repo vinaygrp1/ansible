@@ -4,8 +4,7 @@
   - name: print names
     ansible.builtin.debug:
       msg: "Hello {{ items }}"
-      loop:
-      - linux
-      - shell
-      - ansible
-      
+    loop:
+    - linux
+    - shell
+    - ansible
