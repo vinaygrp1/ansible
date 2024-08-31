@@ -48,10 +48,10 @@
       Duration: 120hrs
   tasks:
   - name: before convert
-    ansible.bultin.debug:
+    ansible.builtin.debug:
       msg: "Before convert: {{ my_dict }}"
   - name: after convert
-    ansible.bultin.debug:
+    ansible.builtin.debug:
       msg: "after convert: {{ my_dict | dict2times }}" 
 
 
