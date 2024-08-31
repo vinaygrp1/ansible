@@ -40,7 +40,7 @@
 
 
 - name: convert dictionary into items/list
-  host: localhost
+  hosts: localhost
   vars:
     my_dict: # this is called as dictionary or map or key value pair
       Course: Ansible
